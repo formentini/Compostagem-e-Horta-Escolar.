@@ -25,40 +25,75 @@ body {
   z-index: 1;
 }
 
-/* ====== EFEITO PARALLAX NO BACKGROUND - MAIS SUAVE E RÁPIDO ====== */
+/* ====== EFEITO PARALLAX NO BACKGROUND - MAIS SUAVE E RÁPIDO ======*/
 .parallax-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120%; 
+  height: 300%; /* Triplicamos a altura para garantir cobertura total */
   background-image: url('https://images.unsplash.com/photo-1529313780224-1a12b68bed16?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774');
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.6; /* 60% de opacidade */
+  background-position: center top;
+  background-repeat: repeat-y; /* Agora a imagem se repete verticalmente */
+  opacity: 0.6;
   z-index: -1;
   
-  
+  /* Efeito parallax mais rápido e suave */
   transform: translateZ(0);
   will-change: transform;
-  transition: transform 0.1s ease-out; 
+  transition: transform 0.1s ease-out;
 }
 
+/* Camada extra para garantir cobertura completa */
+.parallax-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(46, 94, 58, 0.1) 0%,
+      transparent 20%,
+      transparent 80%,
+      rgba(46, 94, 58, 0.1) 100%
+    );
+  pointer-events: none;
+}
+
+/* Efeito de movimento mais rápido no scroll */
 @media (prefers-reduced-motion: no-preference) {
   .parallax-background {
     background-attachment: scroll;
-    background-position: center 0%;
-    animation: parallaxMove 20s linear infinite alternate;
+    animation: parallaxMove 15s linear infinite alternate;
   }
   
   @keyframes parallaxMove {
     0% {
-      transform: translateY(0px) scale(1.05);
+      transform: translateY(0px) scale(1.02);
     }
     100% {
-      transform: translateY(-50px) scale(1.05);
+      transform: translateY(-100px) scale(1.02);
+    }
+  }
+}
+
+/* Ajuste para mobile */
+@media (max-width: 900px) {
+  .parallax-background {
+    height: 400%; /* Mais altura no mobile para garantir */
+    animation: parallaxMoveMobile 12s linear infinite alternate;
+  }
+  
+  @keyframes parallaxMoveMobile {
+    0% {
+      transform: translateY(0px) scale(1.01);
+    }
+    100% {
+      transform: translateY(-50px) scale(1.01);
     }
   }
 }
@@ -429,18 +464,3 @@ footer {
     width: 100%;
   }
   
-  /* Ajuste do parallax para mobile */
-  .parallax-background {
-    height: 100%;
-    animation: parallaxMoveMobile 15s linear infinite alternate;
-  }
-  
-  @keyframes parallaxMoveMobile {
-    0% {
-      transform: translateY(0px) scale(1.02);
-    }
-    100% {
-      transform: translateY(-30px) scale(1.02);
-    }
-  }
-  }
