@@ -25,10 +25,6 @@ body {
   z-index: 1;
 }
 
-/* ====== EFEITO PARALLAX NO BACKGROUND - MAIS SUAVE E RÁPIDO ======*/
-Ah, entendi! Você quer reduzir a claridade/brightness da imagem. Vou ajustar usando o filtro brightness. Aqui está a correção:
-
-```css
 /* ====== EFEITO PARALLAX NO BACKGROUND - COM REPETIÇÃO E BRILHO REDUZIDO ====== */
 .parallax-background {
   position: fixed;
@@ -41,7 +37,7 @@ Ah, entendi! Você quer reduzir a claridade/brightness da imagem. Vou ajustar us
   background-position: center top;
   background-repeat: repeat-y;
   opacity: 0.6;
-  filter: brightness(0.7); /* Reduz o brilho para 70% do original */
+  filter: brightness(0.6); /* Reduz o brilho para 70% do original */
   z-index: -1;
   transform: translateZ(0);
   will-change: transform;
