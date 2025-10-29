@@ -1,103 +1,93 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Site Profissional — Diário & Portfólio</title>
-
-
-<!-- Fontes sofisticadas -->
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Profissional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-<header>
-<div class="brand">
-<div class="logo">SC</div>
-<div>
-<h1>Studio & Conteúdo</h1>
-<p class="subtitle">Design elegante • Diário de bordo • Galeria</p>
-</div>
-</div>
-<nav>
-<a href="#galeria">Galeria</a>
-<a href="#diario">Diário</a>
-<a href="#leitura">Leitura</a>
-</nav>
-</header>
+  <header>
+    <div class="brand">
+      <div class="logo">RC</div>
+      <div>
+        <h1>Meu Site Profissional</h1>
+        <p class="subtitle">Design, Desenvolvimento e Reflexões</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#galeria">Galeria</a>
+      <a href="#diario">Diário de Bordo</a>
+      <a href="#texto">Textos</a>
+    </nav>
+  </header>
 
+  <section class="hero container">
+    <div class="hero-card">
+      <h2>Bem-vindo!</h2>
+      <p>Este é um espaço para apresentar meus projetos, compartilhar ideias e registrar o progresso do meu trabalho. Explore as seções abaixo para conhecer mais.</p>
+    </div>
+    <img src="https://picsum.photos/600/400?random=1" alt="Imagem principal" class="hero-image">
+  </section>
 
-<div class="hero">
-<div class="hero-card">
-<h2>Bem-vindo</h2>
-<p>Este é um layout limpo e profissional feito para hospedagem no GitHub Pages. Paleta de cores: verdes e marrons, tipografia sofisticada. A seção de diário salva entradas localmente no seu navegador para prototipagem rápida.</p>
-<p style="margin-top:12px;color:#555"><strong>Dicas:</strong> substitua as imagens de exemplo por suas imagens em /assets/ ou links externos, edite textos longos diretamente na seção "Leitura".</p>
-</div>
+  <section id="galeria" class="gallery container">
+    <figure><img src="https://picsum.photos/400/300?random=2" alt="Imagem 1"><figcaption>Projeto 1</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=3" alt="Imagem 2"><figcaption>Projeto 2</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=4" alt="Imagem 3"><figcaption>Projeto 3</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=5" alt="Imagem 4"><figcaption>Projeto 4</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=6" alt="Imagem 5"><figcaption>Projeto 5</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=7" alt="Imagem 6"><figcaption>Projeto 6</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=8" alt="Imagem 7"><figcaption>Projeto 7</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=9" alt="Imagem 8"><figcaption>Projeto 8</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=10" alt="Imagem 9"><figcaption>Projeto 9</figcaption></figure>
+    <figure><img src="https://picsum.photos/400/300?random=11" alt="Imagem 10"><figcaption>Projeto 10</figcaption></figure>
+  </section>
 
+  <section id="diario" class="logbook container">
+    <div class="board">
+      <h3>Diário de Bordo</h3>
+      <p>Este é o meu espaço de registro e reflexão sobre o processo criativo, o desenvolvimento do projeto e os aprendizados obtidos ao longo do caminho.</p>
 
-<aside class="hero-card">
-<h3 style="margin-top:0;color:var(--marrom-escuro)">Contato rápido</h3>
-<p style="margin:0 0 12px 0">Email: <strong>seu@email.com</strong></p>
-<p style="margin:0 0 16px 0">Local: São Paulo, Brasil</p>
-<button class="btn">Enviar mensagem</button>
-</aside>
-</div>
+      <article class="entry">
+        <time>29 de outubro de 2025</time>
+        <p>Hoje finalizei a estrutura principal do site e revisei as paletas de cores em tons de verde e marrom. O resultado ficou elegante e equilibrado. O próximo passo será revisar o conteúdo textual e preparar o layout para publicação no GitHub Pages.</p>
+      </article>
 
+      <article class="entry">
+        <time>28 de outubro de 2025</time>
+        <p>Iniciei o desenvolvimento do projeto e defini as bases visuais do design. A escolha da tipografia “Playfair Display” trouxe sofisticação ao layout, enquanto as cores naturais reforçam a identidade orgânica da proposta.</p>
+      </article>
 
-<section id="galeria" class="gallery" aria-label="Galeria de imagens">
-<!-- 10 imagens de exemplo, substitua os seeds ou URLs -->
-<figure><img src="https://picsum.photos/seed/1/800/600" alt="Imagem 1"><figcaption>Imagem 1 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/2/800/600" alt="Imagem 2"><figcaption>Imagem 2 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/3/800/600" alt="Imagem 3"><figcaption>Imagem 3 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/4/800/600" alt="Imagem 4"><figcaption>Imagem 4 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/5/800/600" alt="Imagem 5"><figcaption>Imagem 5 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/6/800/600" alt="Imagem 6"><figcaption>Imagem 6 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/7/800/600" alt="Imagem 7"><figcaption>Imagem 7 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/8/800/600" alt="Imagem 8"><figcaption>Imagem 8 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/9/800/600" alt="Imagem 9"><figcaption>Imagem 9 — Descrição curta</figcaption></figure>
-<figure><img src="https://picsum.photos/seed/10/800/600" alt="Imagem 10"><figcaption>Imagem 10 — Descrição curta</figcaption></figure>
-</section>
+      <article class="entry">
+        <time>27 de outubro de 2025</time>
+        <p>Comecei o planejamento e a organização das seções. O objetivo é criar um site limpo, profissional e funcional — com espaço para textos longos, uma galeria visual e um diário de bordo narrativo.</p>
+      </article>
+    </div>
 
+    <div>
+      <div class="board">
+        <h3>Resumo</h3>
+        <p>O diário serve como registro do progresso e das decisões tomadas durante o desenvolvimento. Pode conter anotações técnicas, reflexões pessoais e análises de design.</p>
+      </div>
 
-<section id="diario" class="logbook">
-<div class="board">
-<h3>Diário de bordo</h3>
-<label for="entry">Nova entrada</label>
-<textarea id="entry" placeholder="Escreva aqui sua entrada do dia..."></textarea>
-<div style="margin-top:10px;display:flex;gap:8px">
-<button id="saveEntry" class="btn">Salvar entrada</button>
-<button id="clearEntries" class="btn secondary">Limpar tudo</button>
-</div>
+      <div class="board">
+        <h3>Sobre o Projeto</h3>
+        <p>Este site foi desenvolvido com HTML e CSS puros, priorizando leveza, elegância e responsividade. A hospedagem será feita via GitHub Pages.</p>
+      </div>
+    </div>
+  </section>
 
+  <section id="texto" class="longread container">
+    <h2>Espaço para Grandes Textos</h2>
+    <div class="content">
+      <p>Este espaço é dedicado a textos extensos, artigos, ensaios ou documentações que merecem um formato mais amplo e detalhado. Aqui você pode escrever análises, estudos ou reflexões sobre seu trabalho e processos criativos.</p>
+      <p>O objetivo é oferecer um ambiente visualmente agradável para leitura, com espaçamento confortável, contraste suave e tipografia sofisticada. O conteúdo pode ser atualizado diretamente no HTML conforme necessário.</p>
+    </div>
+  </section>
 
-<div class="entries" id="entriesList" aria-live="polite" style="margin-top:12px">
-<!-- Entradas aparecerão aqui -->
-</div>
-</div>
-
-
-<div>
-<div class="board" style="margin-bottom:14px">
-<h3>Resumo rápido</h3>
-<p>Use o diário para anotar progresso, ideias, decisões de design e acompanhamento de entregas. As entradas são salvas localmente no navegador (localStorage) e ficam disponíveis apenas neste computador e navegador.</p>
-</div>
-
-
-<div class="board">
-<h3>Configurações</h3>
-<label style="display:block;margin-bottom:8px">Tema</label>
-<p style="margin:0 0 10px 0">Paleta já aplicada — verde e marrom para sensação orgânica e sofisticada.</p>
-<button id="exportBtn" class="btn">Exportar entradas (JSON)</button>
-</div>
-</div>
-</section>
-
-
-<section id="leitura" class="longread">
-<h2>Espaço para grandes textos</h2>
-<div class="content" id="longContent" contenteditable="true" role="textbox" aria-multiline="true">
-<p><strong>Título sugerido:</strong> Reflexões sobre design e processo criativo</p>
-<p>Este espaço é editável — cole ou escreva textos longos aqui. Ideal para artigos, ensaios, documentação ou portfólios textuais. O conteúdo editável é temporário; para publicar de forma persistente, copie o texto e salve em arquivo .md, .html ou abravia no repositório do GitHub.</p>
+  <footer>
+    <p>&copy; 2025 Ruan Canili. Todos os direitos reservados.</p>
+  </footer>
+</body>
 </html>
