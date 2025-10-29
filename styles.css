@@ -25,24 +25,42 @@ body {
   z-index: 1;
 }
 
-/* ====== EFEITO PARALLAX NO BACKGROUND ====== */
+/* ====== EFEITO PARALLAX NO BACKGROUND - MAIS SUAVE E RÁPIDO ====== */
 .parallax-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120%; 
   background-image: url('https://images.unsplash.com/photo-1529313780224-1a12b68bed16?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0.7; /* 60% de opacidade */
+  opacity: 0.6; /* 60% de opacidade */
   z-index: -1;
   
-  /* Efeito parallax suave */
+  
   transform: translateZ(0);
   will-change: transform;
+  transition: transform 0.1s ease-out; 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .parallax-background {
+    background-attachment: scroll;
+    background-position: center 0%;
+    animation: parallaxMove 20s linear infinite alternate;
+  }
+  
+  @keyframes parallaxMove {
+    0% {
+      transform: translateY(0px) scale(1.05);
+    }
+    100% {
+      transform: translateY(-50px) scale(1.05);
+    }
+  }
 }
 
 /* ====== CABEÇALHO ====== */
@@ -409,5 +427,20 @@ footer {
 
   .video-card {
     width: 100%;
+  }
+  
+  /* Ajuste do parallax para mobile */
+  .parallax-background {
+    height: 100%;
+    animation: parallaxMoveMobile 15s linear infinite alternate;
+  }
+  
+  @keyframes parallaxMoveMobile {
+    0% {
+      transform: translateY(0px) scale(1.02);
+    }
+    100% {
+      transform: translateY(-30px) scale(1.02);
+    }
   }
   }
