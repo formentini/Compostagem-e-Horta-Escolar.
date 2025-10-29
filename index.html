@@ -17,6 +17,7 @@
       </div>
     </div>
     <nav>
+      <a href="#explicacao">Explicação</a>
       <a href="#galeria">Galeria</a>
       <a href="#diario">Diário de Bordo</a>
       <a href="#texto">Textos</a>
@@ -24,6 +25,7 @@
     </nav>
   </header>
 
+  <!-- Seção de Boas-vindas -->
   <section class="hero container">
     <div class="hero-card">
       <h2>Bem-vindo!</h2>
@@ -31,53 +33,78 @@
     </div>
   </section>
 
-  <section id="galeria" class="gallery container">
-    <figure><img src="https://picsum.photos/400/300?random=2" alt="Imagem 1"><figcaption>Projeto 1</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=3" alt="Imagem 2"><figcaption>Projeto 2</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=4" alt="Imagem 3"><figcaption>Projeto 3</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=5" alt="Imagem 4"><figcaption>Projeto 4</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=6" alt="Imagem 5"><figcaption>Projeto 5</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=7" alt="Imagem 6"><figcaption>Projeto 6</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=8" alt="Imagem 7"><figcaption>Projeto 7</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=9" alt="Imagem 8"><figcaption>Projeto 8</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=10" alt="Imagem 9"><figcaption>Projeto 9</figcaption></figure>
-    <figure><img src="https://picsum.photos/400/300?random=11" alt="Imagem 10"><figcaption>Projeto 10</figcaption></figure>
+  <!-- Nova seção: Explicação e Curiosidades -->
+  <section id="explicacao" class="info-section container">
+    <h2>Explicação e Curiosidades</h2>
+    <div class="info-grid">
+      <div class="info-box">
+        <img src="https://picsum.photos/500/300?random=101" alt="Explicação do Projeto">
+        <h3>Como o site foi desenvolvido</h3>
+        <p>Este site foi criado utilizando apenas HTML e CSS puro, priorizando a leveza e a elegância. Cada seção foi planejada para manter uma experiência visual harmoniosa e responsiva em qualquer dispositivo.</p>
+      </div>
+      <div class="info-box">
+        <img src="https://picsum.photos/500/300?random=102" alt="Curiosidades do Projeto">
+        <h3>Curiosidades</h3>
+        <p>O design foi inspirado na natureza e nas texturas da madeira e folhas, simbolizando crescimento e estabilidade. As cores verdes e marrons refletem uma conexão com o ambiente e equilíbrio estético.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Galeria de Fotos e Vídeos -->
+  <section id="galeria" class="gallery-section container">
+    <div class="media-grid">
+      <div class="photos">
+        <figure><img src="https://picsum.photos/400/300?random=2" alt="Imagem 1"><figcaption>Projeto 1</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=3" alt="Imagem 2"><figcaption>Projeto 2</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=4" alt="Imagem 3"><figcaption>Projeto 3</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=5" alt="Imagem 4"><figcaption>Projeto 4</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=6" alt="Imagem 5"><figcaption>Projeto 5</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=7" alt="Imagem 6"><figcaption>Projeto 6</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=8" alt="Imagem 7"><figcaption>Projeto 7</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=9" alt="Imagem 8"><figcaption>Projeto 8</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=10" alt="Imagem 9"><figcaption>Projeto 9</figcaption></figure>
+        <figure><img src="https://picsum.photos/400/300?random=11" alt="Imagem 10"><figcaption>Projeto 10</figcaption></figure>
+      </div>
+
+      <div class="videos">
+        <figure class="video-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo 1" frameborder="0" allowfullscreen></iframe>
+          <figcaption>Apresentação do Projeto</figcaption>
+        </figure>
+        <figure class="video-card">
+          <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Vídeo 2" frameborder="0" allowfullscreen></iframe>
+          <figcaption>Making Of</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diário de Bordo -->
   <section id="diario" class="logbook container">
     <div class="board">
       <h3>Diário de Bordo</h3>
-      <p>Este é o meu espaço de registro e reflexão sobre o processo criativo, o desenvolvimento do projeto e os aprendizados obtidos ao longo do caminho.</p>
 
       <article class="entry">
+        <img src="https://picsum.photos/400/250?random=200" alt="Dia 29 de outubro de 2025">
         <time>29 de outubro de 2025</time>
         <p>Hoje finalizei a estrutura principal do site e revisei as paletas de cores em tons de verde e marrom. O resultado ficou elegante e equilibrado. O próximo passo será revisar o conteúdo textual e preparar o layout para publicação no GitHub Pages.</p>
       </article>
 
       <article class="entry">
+        <img src="https://picsum.photos/400/250?random=201" alt="Dia 28 de outubro de 2025">
         <time>28 de outubro de 2025</time>
         <p>Iniciei o desenvolvimento do projeto e defini as bases visuais do design. A escolha da tipografia “Playfair Display” trouxe sofisticação ao layout, enquanto as cores naturais reforçam a identidade orgânica da proposta.</p>
       </article>
 
       <article class="entry">
+        <img src="https://picsum.photos/400/250?random=202" alt="Dia 27 de outubro de 2025">
         <time>27 de outubro de 2025</time>
         <p>Comecei o planejamento e a organização das seções. O objetivo é criar um site limpo, profissional e funcional — com espaço para textos longos, uma galeria visual e um diário de bordo narrativo.</p>
       </article>
     </div>
-
-    <div>
-      <div class="board">
-        <h3>Resumo</h3>
-        <p>O diário serve como registro do progresso e das decisões tomadas durante o desenvolvimento. Pode conter anotações técnicas, reflexões pessoais e análises de design.</p>
-      </div>
-
-      <div class="board">
-        <h3>Sobre o Projeto</h3>
-        <p>Este site foi desenvolvido com HTML e CSS puros, priorizando leveza, elegância e responsividade. A hospedagem será feita via GitHub Pages.</p>
-      </div>
-    </div>
   </section>
 
+  <!-- Espaço para Grandes Textos -->
   <section id="texto" class="longread container">
     <h2>Espaço para Grandes Textos</h2>
     <div class="content">
@@ -86,6 +113,7 @@
     </div>
   </section>
 
+  <!-- Contato -->
   <section id="contato" class="contact container">
     <h2>Contato</h2>
     <p>Entre em contato para colaborações, dúvidas ou feedback sobre o projeto.</p>
