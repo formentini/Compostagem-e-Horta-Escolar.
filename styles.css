@@ -32,35 +32,16 @@ body {
   left: 0;
   width: 100%;
   height: 300%;
-  background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
+  background-image: url('https://images.unsplash.com/photo-1529313780224-1a12b68bed16?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774');
   background-size: cover;
   background-position: center top;
   background-repeat: repeat-y;
   opacity: 0.6;
-  filter: brightness(0.6); /* Reduz o brilho para 70% do original */
+  filter: brightness(0.7);
   z-index: -1;
   transform: translateZ(0);
   will-change: transform;
   transition: transform 0.1s ease-out;
-}
-
-/* Camada extra com bordas mais finas */
-.parallax-background::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    linear-gradient(
-      to bottom,
-      rgba(46, 94, 58, 0.05) 0%,
-      transparent 10%,
-      transparent 90%,
-      rgba(46, 94, 58, 0.05) 100%
-    );
-  pointer-events: none;
 }
 
 /* Efeito de movimento */
@@ -84,7 +65,7 @@ body {
 @media (max-width: 900px) {
   .parallax-background {
     height: 400%;
-    filter: brightness(0.65); /* Um pouco mais escuro no mobile */
+    filter: brightness(0.65);
     animation: parallaxMoveMobile 12s linear infinite alternate;
   }
   
@@ -166,7 +147,7 @@ nav a:hover {
 
 /* ====== SEÇÃO HERO (BEM-VINDO) ====== */
 .hero-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.7); /* Reduzido de 0.9 para 0.7 */
   border-radius: 16px;
   padding: 40px;
   text-align: center;
@@ -185,7 +166,7 @@ nav a:hover {
 /* ====== EXPLICAÇÃO E CURIOSIDADES ====== */
 .info-section {
   margin-top: 40px;
-  background: rgba(247, 246, 244, 0.85);
+  background: rgba(247, 246, 244, 0.6); /* Reduzido de 0.85 para 0.6 */
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
@@ -206,7 +187,7 @@ nav a:hover {
 }
 
 .info-box {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.8); /* Reduzido de 0.95 para 0.8 */
   border-radius: 14px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -237,7 +218,7 @@ nav a:hover {
 
 /* ====== GALERIA DE FOTOS E VÍDEOS ====== */
 .gallery-section {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.6); /* Reduzido de 0.85 para 0.6 */
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -318,7 +299,7 @@ nav a:hover {
 
 /* ====== DIÁRIO DE BORDO ====== */
 .logbook {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.6); /* Reduzido de 0.85 para 0.6 */
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -335,7 +316,7 @@ nav a:hover {
 
 .logbook .entry {
   margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.7); /* Reduzido de 0.9 para 0.7 */
   padding: 20px;
   border-radius: 12px;
 }
@@ -359,7 +340,7 @@ nav a:hover {
 
 /* ====== TEXTO LONGO ====== */
 .longread {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.6); /* Reduzido de 0.85 para 0.6 */
   border-radius: 16px;
   padding: 40px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -382,7 +363,7 @@ nav a:hover {
 
 /* ====== CONTATO ====== */
 .contact {
-  background: rgba(247, 246, 244, 0.85);
+  background: rgba(247, 246, 244, 0.6); /* Reduzido de 0.85 para 0.6 */
   padding: 40px;
   border-radius: 16px;
   border: 2px solid var(--verde-claro);
@@ -463,4 +444,4 @@ footer {
   .video-card {
     width: 100%;
   }
-  
+    }
