@@ -1,80 +1,52 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌿 Meu Site Verde</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="topo">
-        <div class="logo">🌱 Meu Site Verde</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<!doctype html>
+});
+}
+function saveEntry(){
+const text = entryEl.value.trim();
+if(!text) return alert('Escreva algo antes de salvar.');
+const raw = localStorage.getItem('diario_entries');
+const arr = raw ? JSON.parse(raw) : [];
+arr.push({t:Date.now(), text});
+localStorage.setItem('diario_entries', JSON.stringify(arr));
+entryEl.value='';
+loadEntries();
+}
+saveBtn.addEventListener('click', saveEntry);
+clearBtn.addEventListener('click', ()=>{
+if(confirm('Apagar todas as entradas do diário?')){
+localStorage.removeItem('diario_entries');loadEntries();
+}
+});
+exportBtn.addEventListener('click', ()=>{
+const raw = localStorage.getItem('diario_entries') || '[]';
+const blob = new Blob([raw],{type:'application/json'});
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');a.href=url;a.download='diario_entries.json';a.click();URL.revokeObjectURL(url);
+});
+loadEntries();
 
-    <section id="inicio" class="hero">
-        <div class="hero-content fade-in">
-            <h1>Viva o Verde</h1>
-            <p>Natureza, harmonia e inspiração em cada detalhe.</p>
-            <a href="#sobre" class="btn">Descubra Mais</a>
-        </div>
-    </section>
 
-    <div class="divisor"></div>
+// === Longread salvar/carregar ===
+const longContent = document.getElementById('longContent');
+const saveLong = document.getElementById('saveLong');
+const loadLong = document.getElementById('loadLong');
 
-    <section id="galeria" class="galeria fade-in">
-        <h2>🌿 Galeria Natural</h2>
-        <p class="descricao">Um mergulho visual na beleza da natureza.</p>
-        <div class="fotos-container">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="Floresta">
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=80" alt="Lago Verde">
-            <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1000&q=80" alt="Folhas">
-            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80" alt="Montanha">
-            <img src="https://images.unsplash.com/photo-1528834351871-3f9c8e3d2d4f?auto=format&fit=crop&w=1000&q=80" alt="Plantas">
-            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80" alt="Natureza">
-        </div>
-    </section>
 
-    <div class="divisor divisor-verde"></div>
+saveLong.addEventListener('click', ()=>{
+localStorage.setItem('longread_content', longContent.innerHTML);
+alert('Conteúdo salvo localmente.');
+});
+loadLong.addEventListener('click', ()=>{
+const raw = localStorage.getItem('longread_content');
+if(!raw){return alert('Nenhum conteúdo salvo encontrado.');}
+longContent.innerHTML = raw;alert('Conteúdo carregado.');
+});
 
-    <section id="sobre" class="sobre fade-in">
-        <h2>Sobre o Projeto</h2>
-        <p>
-            <strong>Meu Site Verde</strong> nasceu da ideia de conectar pessoas à natureza. Cada cor, textura e detalhe
-            deste site foi pensado para transmitir calma, leveza e renovação.
-        </p>
-        <p>
-            A natureza é nossa maior professora — resiliente, bela e diversa. Cuidar dela é cuidar de nós mesmos. 
-            Que este espaço sirva de inspiração para um mundo mais verde e equilibrado.
-        </p>
-    </section>
 
-    <section id="contato" class="contato fade-in">
-        <h2>Fale Conosco</h2>
-        <p>Envie uma mensagem, compartilhe ideias ou colabore com o projeto.</p>
-        <a href="mailto:contato@meusiteverde.com" class="btn">📩 Contato por E-mail</a>
-    </section>
+// Accessibility: fechar imagens com tecla escape (exemplo de interação)
+document.addEventListener('keydown', (e)=>{if(e.key==='Escape'){document.activeElement.blur();}});
 
-    <footer>
-        <p>© 2025 Meu Site Verde | Criado com 💚 por você</p>
-    </footer>
 
-    <script>
-        // Animação suave ao rolar
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('show');
-            });
-        });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+</script>
 </body>
 </html>
