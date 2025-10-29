@@ -26,26 +26,29 @@ body {
 }
 
 /* ====== EFEITO PARALLAX NO BACKGROUND - MAIS SUAVE E RÁPIDO ======*/
+Ah, entendi! Você quer reduzir a claridade/brightness da imagem. Vou ajustar usando o filtro brightness. Aqui está a correção:
+
+```css
+/* ====== EFEITO PARALLAX NO BACKGROUND - COM REPETIÇÃO E BRILHO REDUZIDO ====== */
 .parallax-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 300%; /* Triplicamos a altura para garantir cobertura total */
-  background-image: url('https://images.unsplash.com/photo-1529313780224-1a12b68bed16?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774');
+  height: 300%;
+  background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
   background-size: cover;
   background-position: center top;
-  background-repeat: repeat-y; /* Agora a imagem se repete verticalmente */
+  background-repeat: repeat-y;
   opacity: 0.6;
+  filter: brightness(0.7); /* Reduz o brilho para 70% do original */
   z-index: -1;
-  
-  /* Efeito parallax mais rápido e suave */
   transform: translateZ(0);
   will-change: transform;
   transition: transform 0.1s ease-out;
 }
 
-/* Camada extra para garantir cobertura completa */
+/* Camada extra com bordas mais finas */
 .parallax-background::before {
   content: '';
   position: absolute;
@@ -56,15 +59,15 @@ body {
   background: 
     linear-gradient(
       to bottom,
-      rgba(46, 94, 58, 0.1) 0%,
-      transparent 20%,
-      transparent 80%,
-      rgba(46, 94, 58, 0.1) 100%
+      rgba(46, 94, 58, 0.05) 0%,
+      transparent 10%,
+      transparent 90%,
+      rgba(46, 94, 58, 0.05) 100%
     );
   pointer-events: none;
 }
 
-/* Efeito de movimento mais rápido no scroll */
+/* Efeito de movimento */
 @media (prefers-reduced-motion: no-preference) {
   .parallax-background {
     background-attachment: scroll;
@@ -84,7 +87,8 @@ body {
 /* Ajuste para mobile */
 @media (max-width: 900px) {
   .parallax-background {
-    height: 400%; /* Mais altura no mobile para garantir */
+    height: 400%;
+    filter: brightness(0.65); /* Um pouco mais escuro no mobile */
     animation: parallaxMoveMobile 12s linear infinite alternate;
   }
   
