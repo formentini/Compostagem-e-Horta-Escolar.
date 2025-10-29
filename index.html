@@ -1,52 +1,103 @@
-<!doctype html>
-});
-}
-function saveEntry(){
-const text = entryEl.value.trim();
-if(!text) return alert('Escreva algo antes de salvar.');
-const raw = localStorage.getItem('diario_entries');
-const arr = raw ? JSON.parse(raw) : [];
-arr.push({t:Date.now(), text});
-localStorage.setItem('diario_entries', JSON.stringify(arr));
-entryEl.value='';
-loadEntries();
-}
-saveBtn.addEventListener('click', saveEntry);
-clearBtn.addEventListener('click', ()=>{
-if(confirm('Apagar todas as entradas do diário?')){
-localStorage.removeItem('diario_entries');loadEntries();
-}
-});
-exportBtn.addEventListener('click', ()=>{
-const raw = localStorage.getItem('diario_entries') || '[]';
-const blob = new Blob([raw],{type:'application/json'});
-const url = URL.createObjectURL(blob);
-const a = document.createElement('a');a.href=url;a.download='diario_entries.json';a.click();URL.revokeObjectURL(url);
-});
-loadEntries();
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Site Profissional — Diário & Portfólio</title>
 
 
-// === Longread salvar/carregar ===
-const longContent = document.getElementById('longContent');
-const saveLong = document.getElementById('saveLong');
-const loadLong = document.getElementById('loadLong');
+<!-- Fontes sofisticadas -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
 
-saveLong.addEventListener('click', ()=>{
-localStorage.setItem('longread_content', longContent.innerHTML);
-alert('Conteúdo salvo localmente.');
-});
-loadLong.addEventListener('click', ()=>{
-const raw = localStorage.getItem('longread_content');
-if(!raw){return alert('Nenhum conteúdo salvo encontrado.');}
-longContent.innerHTML = raw;alert('Conteúdo carregado.');
-});
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<header>
+<div class="brand">
+<div class="logo">SC</div>
+<div>
+<h1>Studio & Conteúdo</h1>
+<p class="subtitle">Design elegante • Diário de bordo • Galeria</p>
+</div>
+</div>
+<nav>
+<a href="#galeria">Galeria</a>
+<a href="#diario">Diário</a>
+<a href="#leitura">Leitura</a>
+</nav>
+</header>
 
 
-// Accessibility: fechar imagens com tecla escape (exemplo de interação)
-document.addEventListener('keydown', (e)=>{if(e.key==='Escape'){document.activeElement.blur();}});
+<div class="hero">
+<div class="hero-card">
+<h2>Bem-vindo</h2>
+<p>Este é um layout limpo e profissional feito para hospedagem no GitHub Pages. Paleta de cores: verdes e marrons, tipografia sofisticada. A seção de diário salva entradas localmente no seu navegador para prototipagem rápida.</p>
+<p style="margin-top:12px;color:#555"><strong>Dicas:</strong> substitua as imagens de exemplo por suas imagens em /assets/ ou links externos, edite textos longos diretamente na seção "Leitura".</p>
+</div>
 
 
-</script>
-</body>
+<aside class="hero-card">
+<h3 style="margin-top:0;color:var(--marrom-escuro)">Contato rápido</h3>
+<p style="margin:0 0 12px 0">Email: <strong>seu@email.com</strong></p>
+<p style="margin:0 0 16px 0">Local: São Paulo, Brasil</p>
+<button class="btn">Enviar mensagem</button>
+</aside>
+</div>
+
+
+<section id="galeria" class="gallery" aria-label="Galeria de imagens">
+<!-- 10 imagens de exemplo, substitua os seeds ou URLs -->
+<figure><img src="https://picsum.photos/seed/1/800/600" alt="Imagem 1"><figcaption>Imagem 1 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/2/800/600" alt="Imagem 2"><figcaption>Imagem 2 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/3/800/600" alt="Imagem 3"><figcaption>Imagem 3 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/4/800/600" alt="Imagem 4"><figcaption>Imagem 4 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/5/800/600" alt="Imagem 5"><figcaption>Imagem 5 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/6/800/600" alt="Imagem 6"><figcaption>Imagem 6 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/7/800/600" alt="Imagem 7"><figcaption>Imagem 7 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/8/800/600" alt="Imagem 8"><figcaption>Imagem 8 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/9/800/600" alt="Imagem 9"><figcaption>Imagem 9 — Descrição curta</figcaption></figure>
+<figure><img src="https://picsum.photos/seed/10/800/600" alt="Imagem 10"><figcaption>Imagem 10 — Descrição curta</figcaption></figure>
+</section>
+
+
+<section id="diario" class="logbook">
+<div class="board">
+<h3>Diário de bordo</h3>
+<label for="entry">Nova entrada</label>
+<textarea id="entry" placeholder="Escreva aqui sua entrada do dia..."></textarea>
+<div style="margin-top:10px;display:flex;gap:8px">
+<button id="saveEntry" class="btn">Salvar entrada</button>
+<button id="clearEntries" class="btn secondary">Limpar tudo</button>
+</div>
+
+
+<div class="entries" id="entriesList" aria-live="polite" style="margin-top:12px">
+<!-- Entradas aparecerão aqui -->
+</div>
+</div>
+
+
+<div>
+<div class="board" style="margin-bottom:14px">
+<h3>Resumo rápido</h3>
+<p>Use o diário para anotar progresso, ideias, decisões de design e acompanhamento de entregas. As entradas são salvas localmente no navegador (localStorage) e ficam disponíveis apenas neste computador e navegador.</p>
+</div>
+
+
+<div class="board">
+<h3>Configurações</h3>
+<label style="display:block;margin-bottom:8px">Tema</label>
+<p style="margin:0 0 10px 0">Paleta já aplicada — verde e marrom para sensação orgânica e sofisticada.</p>
+<button id="exportBtn" class="btn">Exportar entradas (JSON)</button>
+</div>
+</div>
+</section>
+
+
+<section id="leitura" class="longread">
+<h2>Espaço para grandes textos</h2>
+<div class="content" id="longContent" contenteditable="true" role="textbox" aria-multiline="true">
+<p><strong>Título sugerido:</strong> Reflexões sobre design e processo criativo</p>
+<p>Este espaço é editável — cole ou escreva textos longos aqui. Ideal para artigos, ensaios, documentação ou portfólios textuais. O conteúdo editável é temporário; para publicar de forma persistente, copie o texto e salve em arquivo .md, .html ou abravia no repositório do GitHub.</p>
 </html>
