@@ -457,3 +457,61 @@ footer {
     grid-row: 2 !important;
   }
 }
+
+/* ====== GIFS PAUSADOS QUE DÃO PLAY NO HOVER/CLIQUE ====== */
+.gif-pausado {
+  /* Pausa o GIF (funciona na maioria dos navegadores modernos) */
+  animation-play-state: paused !important;
+}
+
+/* Desktop - play no hover */
+@media (hover: hover) {
+  figure:hover .gif-pausado {
+    animation-play-state: running !important;
+  }
+}
+
+/* Mobile - play no clique/touch */
+@media (max-width: 768px) {
+  .gif-pausado {
+    /* Garante que esteja pausado inicialmente no mobile */
+    animation-play-state: paused !important;
+  }
+  
+  figure:active .gif-pausado,
+  figure:focus .gif-pausado {
+    animation-play-state: running !important;
+  }
+}
+
+/* Para melhor experiência no mobile, você pode adicionar um indicador visual */
+figure {
+  position: relative;
+  cursor: pointer;
+}
+
+figure::after {
+  content: "▶️ Clique/Touch para animar";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+figure:hover::after {
+  opacity: 1;
+}
+
+/* No mobile, mostra sempre o indicador */
+@media (max-width: 768px) {
+  figure::after {
+    opacity: 1;
+  }
+  }
