@@ -434,41 +434,26 @@ footer {
   .video-card {
     width: 100%;
   }
-    }
 
-/* ====== CORREÇÕES ESPECÍFICAS PARA EXPLICAÇÃO E CURIOSIDADES NO MOBILE ====== */
+  /* ====== CORREÇÃO ESPECÍFICA PARA EXPLICAÇÃO NO MOBILE ====== */
 @media (max-width: 768px) {
-  /* Seção Explicação e Curiosidades - CORREÇÃO PRINCIPAL */
-  .info-section {
-    padding: 25px 20px;
-  }
-  
-  .info-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
   .info-grid {
-    grid-template-columns: 1fr !important; /* Força uma coluna */
-    gap: 25px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 30px;
   }
   
   .info-box {
-    margin: 0 auto;
-    max-width: 100%;
+    width: 100% !important;
+    grid-column: 1 !important;
   }
   
-  .info-box img {
-    height: 180px;
+  .info-box:nth-child(1) {
+    grid-row: 1 !important;
   }
   
-  .info-box h3 {
-    font-size: 1.2rem;
-    margin: 12px 15px 8px;
+  .info-box:nth-child(2) {
+    grid-row: 2 !important;
   }
-  
-  .info-box p {
-    margin: 0 15px 15px;
-    font-size: 0.95rem;
-  }
-      }
+}
