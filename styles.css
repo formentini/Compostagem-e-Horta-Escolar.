@@ -137,7 +137,7 @@ nav a:hover {
 
 /* ====== SEÇÃO HERO (BEM-VINDO) ====== */
 .hero-card {
-  background: rgba(255, 255, 255, 0.7); /* Reduzido de 0.9 para 0.7 */
+  background: rgba(255, 255, 255, 0.6); /* Reduzido de 0.9 para 0.7 */
   border-radius: 16px;
   padding: 40px;
   text-align: center;
