@@ -61,19 +61,7 @@ body {
   }
 }
 
-/* Ajuste para mobile */
-@media (max-width: 900px) {
-  .parallax-background {
-    height: 400%;
-    filter: brightness(0.55);
-    animation: parallaxMoveMobile 12s linear infinite alternate;
-  }
-  
-  @keyframes parallaxMoveMobile {
-    0% {
-      transform: translateY(0px) scale(1.01);
-    }
-    100% {
+
 /* ====== CABEÇALHO ====== */
 header {
   background: linear-gradient(90deg, var(--verde-escuro), var(--marrom-escuro));
@@ -111,6 +99,25 @@ header h1 {
 header .subtitle {
   font-size: 1rem;
   opacity: 0.85;
+}
+
+
+/* Ajuste para mobile */
+@media (max-width: 900px) {
+  .parallax-background {
+    height: 400%;
+    filter: brightness(0.55);
+    animation: parallaxMoveMobile 12s linear infinite alternate;
+  }
+
+  @keyframes parallaxMoveMobile {
+    0% {
+      transform: translateY(0px) scale(1.01);
+    }
+    100% {
+      transform: translateY(-50px) scale(1.01);
+    }
+  }
 }
 
 /* ====== MENU DE NAVEGAÇÃO ====== */
