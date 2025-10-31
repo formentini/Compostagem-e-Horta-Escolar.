@@ -119,7 +119,7 @@ header .subtitle {
   }
 
   header .brand .logo {
-    width: 80px; /* tamanho grande no mobile */
+    width: 20px; /* tamanho grande no mobile */
     max-width: none;
     height: auto;
   }
