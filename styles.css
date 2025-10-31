@@ -74,55 +74,51 @@ body {
       transform: translateY(0px) scale(1.01);
     }
     100% {
-      transform: translateY(-50px) scale(1.01);
-    }
-  }
-}
-
 /* ====== CABEÇALHO ====== */
 header {
   background: linear-gradient(90deg, var(--verde-escuro), var(--marrom-escuro));
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  flex-wrap: wrap;
+  flex-direction: column; /* 🔹 título e menu empilhados */
+  align-items: center;    /* 🔹 centraliza tudo */
+  text-align: center;     /* 🔹 centraliza o texto */
+  padding: 30px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
 }
 
+/* ====== LOGO E TEXTO ====== */
 header .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px; /* espaço entre texto e menu */
 }
 
-/* ====== LOGO ====== */
 header .logo {
-  width: 50px;         /* Tamanho da logo */
+  width: 80px; /* 🔹 aumenta a logo */
   height: auto;
-  margin-right: 10px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* Leve destaque */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-/* ====== TÍTULO E SUBTÍTULO ====== */
 header h1 {
   font-family: var(--fonte-titulo);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 header .subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   opacity: 0.85;
 }
 
 /* ====== MENU DE NAVEGAÇÃO ====== */
 nav {
   display: flex;
-  gap: 50px;
+  gap: 40px;
   flex-wrap: wrap;
+  justify-content: center; /* 🔹 centraliza o menu */
 }
 
 nav a {
@@ -138,25 +134,18 @@ nav a:hover {
 
 /* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 30px;
-  }
-
   header .logo {
-    width: 40px;
+    width: 60px;
   }
 
   header h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   nav {
-    margin-top: 10px;
-    gap: 15px;
+    gap: 20px;
   }
-}
+      }
 
 /* ====== CONTAINER GERAL ====== */
 .container {
