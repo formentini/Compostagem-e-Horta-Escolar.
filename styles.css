@@ -107,12 +107,12 @@ header .subtitle {
     display: flex;
     flex-direction: row; /* mantém logo e texto lado a lado */
     align-items: center; /* alinha verticalmente */
-    gap: 20px; /* espaço entre logo e texto */
+    gap: 5px; /* espaço entre logo e texto */
     padding: 10px; /* ajuste de espaçamento interno */
   }
 
   header .brand .logo {
-    width: 150px !important; /* aumenta a logo no mobile */
+    width: 300px !important; /* aumenta a logo no mobile */
     max-width: none !important;
     height: auto !important;
   }
