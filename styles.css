@@ -99,6 +99,15 @@ header .brand {
   gap: 10px;
 }
 
+/* ====== LOGO ====== */
+header .logo {
+  width: 50px;         /* Tamanho da logo */
+  height: auto;
+  margin-right: 10px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* Leve destaque */
+}
+
+/* ====== TÍTULO E SUBTÍTULO ====== */
 header h1 {
   font-family: var(--fonte-titulo);
   font-size: 1.6rem;
@@ -109,6 +118,7 @@ header .subtitle {
   opacity: 0.85;
 }
 
+/* ====== MENU DE NAVEGAÇÃO ====== */
 nav {
   display: flex;
   gap: 20px;
@@ -124,6 +134,28 @@ nav a {
 
 nav a:hover {
   color: var(--verde-claro);
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 30px;
+  }
+
+  header .logo {
+    width: 40px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    margin-top: 10px;
+    gap: 15px;
+  }
 }
 
 /* ====== CONTAINER GERAL ====== */
