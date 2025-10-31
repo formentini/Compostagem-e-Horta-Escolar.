@@ -114,22 +114,24 @@ header .subtitle {
   header .brand {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 10px;
   }
 
   header .brand .logo {
-    width: 20px; /* tamanho grande no mobile */
+    width: 90px; /* tamanho mais equilibrado no mobile */
     max-width: none;
     height: auto;
   }
 
   header .brand h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 
   header .brand .subtitle {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 }
 
