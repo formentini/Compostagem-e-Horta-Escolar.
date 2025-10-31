@@ -82,11 +82,11 @@ header .brand {
   align-items: center;
   gap: 15px;
   justify-content: center;
-  margin-bottom: 15px; /* espaço entre texto e menu */
+  margin-bottom: 10px; /* espaço entre texto e menu */
 }
 
 header .logo {
-  width: 110px; /* 🔹 aumenta a logo */
+  width: 200px; /* 🔹 aumenta a logo */
   height: auto;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
