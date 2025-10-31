@@ -101,8 +101,35 @@ header .subtitle {
   opacity: 0.85;
 }
 
+/* ====== AJUSTES RESPONSIVOS PARA HEADER ====== */
+@media (max-width: 768px) {
+  header .brand {
+    display: flex;
+    flex-direction: row; /* mantém logo e texto lado a lado */
+    align-items: center; /* alinha verticalmente */
+    gap: 20px; /* espaço entre logo e texto */
+    padding: 10px; /* ajuste de espaçamento interno */
+  }
 
-/* Ajuste para mobile */
+  header .brand .logo {
+    width: 150px !important; /* aumenta a logo no mobile */
+    max-width: none !important;
+    height: auto !important;
+  }
+
+  header .brand h1 {
+    font-size: 1.2rem; /* ajusta tamanho do título */
+    margin: 0;
+  }
+
+  header .brand .subtitle {
+    font-size: 0.95rem; /* ajusta tamanho do subtítulo */
+    margin: 0;
+  }
+}
+
+
+/* Ajuste para mobile parallax */
 @media (max-width: 900px) {
   .parallax-background {
     height: 400%;
