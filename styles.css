@@ -168,45 +168,34 @@ nav a:hover {
   border: 2px solid var(--verde-claro);
   backdrop-filter: blur(2px);
   max-width: 800px;
-  margin: 0 auto 30px; /* centraliza e adiciona espaçamento abaixo */
-}
-
-.hero-card h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--verde-escuro);
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-@media (max-width: 768px) {
-  .hero-card h2 { font-size: 1.5rem; }
+  margin: 0 auto 40px; /* espaço entre seções */
 }
 
 /* ====== SEÇÃO DE INFORMAÇÃO ====== */
 .info-section {
-  margin-top: 40px;
   background: rgba(247, 246, 244, 0.6);
   padding: 15px;
   border-radius: 16px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(2px);
   max-width: 800px;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
 }
 
 .info-section h2 {
   text-align: center;
   font-family: var(--fonte-titulo);
   color: var(--marrom-escuro);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+  gap: 30px; /* aumenta espaço entre caixas */
 }
 
+/* ====== INFO BOX ====== */
 .info-box {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 14px;
@@ -214,7 +203,7 @@ nav a:hover {
   overflow: hidden;
   border: 2px solid var(--marrom-claro);
   transition: transform 0.3s ease;
-  margin-bottom: 20px; /* espaço entre caixas */
+  /* margin removido para gap do grid assumir */
 }
 
 .info-box:hover { transform: translateY(-5px); }
@@ -236,22 +225,6 @@ nav a:hover {
   color: #444;
 }
 
-@media (max-width: 768px) {
-  .info-grid {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto auto !important;
-    gap: 20px;
-  }
-
-  .info-box {
-    width: 100% !important;
-    grid-column: 1 !important;
-  }
-
-  .info-box:nth-child(1) { grid-row: 1 !important; }
-  .info-box:nth-child(2) { grid-row: 2 !important; }
-}
-
 /* ====== GALERIA DE FOTOS ====== */
 .gallery-section {
   background: rgba(255, 255, 255, 0.6);
@@ -260,7 +233,7 @@ nav a:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(2px);
   max-width: 900px;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
 }
 
 .gallery-section .media-grid {
@@ -273,7 +246,7 @@ nav a:hover {
 .photos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+  gap: 20px; /* aumento do espaço */
 }
 
 .photos figure {
@@ -283,7 +256,6 @@ nav a:hover {
   border: 2px solid var(--verde-claro);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-  margin-bottom: 14px; /* espaço entre figuras */
 }
 
 .photos figure:hover { transform: scale(1.03); }
@@ -302,15 +274,11 @@ nav a:hover {
   font-weight: 500;
 }
 
-@media (max-width: 900px) {
-  .gallery-section .media-grid { grid-template-columns: 1fr; }
-}
-
 /* ====== VÍDEOS ====== */
 .videos {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px; /* espaçamento entre vídeos */
 }
 
 .video-card {
@@ -319,7 +287,6 @@ nav a:hover {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--marrom-claro);
-  margin-bottom: 20px; /* espaço entre vídeos */
 }
 
 .video-card iframe {
@@ -338,18 +305,6 @@ nav a:hover {
   background: linear-gradient(180deg, #fff, #f8f6f4);
 }
 
-@media (max-width: 900px) {
-  .videos {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .video-card {
-    width: 100%;
-  }
-}
-
 /* ====== DIÁRIO DE BORDO ====== */
 .logbook {
   background: rgba(255, 255, 255, 0.6);
@@ -359,7 +314,7 @@ nav a:hover {
   border: 2px solid var(--verde-claro);
   backdrop-filter: blur(2px);
   max-width: 800px;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
 }
 
 .logbook h3 {
@@ -370,7 +325,6 @@ nav a:hover {
 }
 
 .logbook .entry {
-  margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.7);
   padding: 15px;
   border-radius: 12px;
@@ -402,7 +356,7 @@ nav a:hover {
   border: 2px solid var(--marrom-claro);
   backdrop-filter: blur(2px);
   max-width: 800px;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
 }
 
 .longread h2 {
@@ -427,7 +381,7 @@ nav a:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(2px);
   max-width: 800px;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
 }
 
 .contact h2 {
@@ -490,6 +444,18 @@ footer {
   .gallery-section {
     max-width: 95%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
+
+  .info-grid {
+    gap: 20px;
   }
+
+  .photos {
+    gap: 16px;
+  }
+
+  .videos {
+    gap: 20px;
+  }
+}
