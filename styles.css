@@ -176,6 +176,7 @@ nav a:hover {
 /* Título do card em verde claro */
 .hero-card h2 {
   color: var(--verde-escuro);
+  font-family: var(--fonte-titulo);
 }
 
 /* ====== SEÇÃO DE INFORMAÇÃO ====== */
