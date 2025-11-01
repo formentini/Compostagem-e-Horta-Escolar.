@@ -184,7 +184,7 @@ nav a:hover {
 .info-section {
   margin-top: 40px;
   background: rgba(247, 246, 244, 0.6);
-  padding: 40px;
+  padding: 20px;
   border-radius: 16px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(2px);
@@ -250,7 +250,7 @@ nav a:hover {
 /* ====== GALERIA DE FOTOS ====== */
 .gallery-section {
   background: rgba(255, 255, 255, 0.6);
-  padding: 40px;
+  padding: 20px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(2px);
@@ -345,7 +345,7 @@ nav a:hover {
 /* ====== DIÁRIO DE BORDO ====== */
 .logbook {
   background: rgba(255, 255, 255, 0.6);
-  padding: 40px;
+  padding: 20px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--verde-claro);
@@ -387,7 +387,7 @@ nav a:hover {
 .longread {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 16px;
-  padding: 40px;
+  padding: 20px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--marrom-claro);
   backdrop-filter: blur(2px);
@@ -409,7 +409,7 @@ nav a:hover {
 /* ====== CONTATO ====== */
 .contact {
   background: rgba(247, 246, 244, 0.6);
-  padding: 40px;
+  padding: 20px;
   border-radius: 16px;
   border: 2px solid var(--verde-claro);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
