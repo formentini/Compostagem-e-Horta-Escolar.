@@ -162,7 +162,7 @@ nav a:hover {
 .hero-card {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 16px;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--verde-claro);
