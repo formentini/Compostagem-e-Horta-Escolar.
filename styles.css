@@ -120,7 +120,7 @@ header .subtitle {
   }
 
   header .brand .logo {
-    width: 90px; /* tamanho mais equilibrado no mobile */
+    width: 90px;
     max-width: none;
     height: auto;
   }
@@ -162,11 +162,13 @@ nav a:hover {
 .hero-card {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 16px;
-  padding: 20px;
+  padding: 15px; /* menor padding */
   text-align: center;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--verde-claro);
   backdrop-filter: blur(2px);
+  max-width: 800px; /* largura limitada */
+  margin: 0 auto;
 }
 
 .hero-card h2 {
@@ -184,10 +186,12 @@ nav a:hover {
 .info-section {
   margin-top: 40px;
   background: rgba(247, 246, 244, 0.6);
-  padding: 20px;
+  padding: 15px;
   border-radius: 16px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(2px);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .info-section h2 {
@@ -222,12 +226,12 @@ nav a:hover {
 
 .info-box h3 {
   font-family: var(--fonte-titulo);
-  margin: 16px;
+  margin: 12px; /* menor margem */
   color: var(--verde-escuro);
 }
 
 .info-box p {
-  margin: 0 16px 20px;
+  margin: 0 12px 16px; /* menor margem inferior */
   color: #444;
 }
 
@@ -235,7 +239,7 @@ nav a:hover {
   .info-grid {
     grid-template-columns: 1fr !important;
     grid-template-rows: auto auto !important;
-    gap: 30px;
+    gap: 20px;
   }
 
   .info-box {
@@ -250,10 +254,12 @@ nav a:hover {
 /* ====== GALERIA DE FOTOS ====== */
 .gallery-section {
   background: rgba(255, 255, 255, 0.6);
-  padding: 20px;
+  padding: 15px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(2px);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .gallery-section .media-grid {
@@ -287,11 +293,10 @@ nav a:hover {
 }
 
 .photos figcaption {
-  padding: 8px;
+  padding: 6px; /* menor padding */
   text-align: center;
   font-size: 14px;
   color: var(--marrom-escuro);
-  background: #fafafa;
   font-weight: 500;
 }
 
@@ -322,7 +327,7 @@ nav a:hover {
 }
 
 .video-card figcaption {
-  padding: 10px 12px;
+  padding: 8px 10px;
   font-size: 14px;
   text-align: center;
   font-weight: 500;
@@ -345,31 +350,33 @@ nav a:hover {
 /* ====== DIÁRIO DE BORDO ====== */
 .logbook {
   background: rgba(255, 255, 255, 0.6);
-  padding: 20px;
+  padding: 15px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--verde-claro);
   backdrop-filter: blur(2px);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .logbook h3 {
   text-align: center;
   color: var(--verde-escuro);
   font-family: var(--fonte-titulo);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .logbook .entry {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.7);
-  padding: 20px;
+  padding: 15px;
   border-radius: 12px;
 }
 
 .logbook .entry img {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
   border: 2px solid var(--verde-claro);
 }
@@ -380,28 +387,30 @@ nav a:hover {
 }
 
 .logbook p {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 /* ====== TEXTO LONGO ====== */
 .longread {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 16px;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--marrom-claro);
   backdrop-filter: blur(2px);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .longread h2 {
   text-align: center;
   font-family: var(--fonte-titulo);
   color: var(--verde-escuro);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .longread p {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   text-align: justify;
   color: #444;
 }
@@ -409,31 +418,33 @@ nav a:hover {
 /* ====== CONTATO ====== */
 .contact {
   background: rgba(247, 246, 244, 0.6);
-  padding: 20px;
+  padding: 15px;
   border-radius: 16px;
   border: 2px solid var(--verde-claro);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(2px);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact h2 {
   text-align: center;
   color: var(--marrom-escuro);
   font-family: var(--fonte-titulo);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .contact input,
 .contact textarea {
-  padding: 10px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-family: var(--fonte-texto);
@@ -443,7 +454,7 @@ nav a:hover {
   background: var(--verde-escuro);
   color: white;
   border: none;
-  padding: 12px;
+  padding: 10px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -464,4 +475,17 @@ footer {
   font-size: 0.9rem;
   position: relative;
   z-index: 2;
+}
+
+/* ====== AJUSTES RESPONSIVOS PARA BACKGROUNDS ====== */
+@media (max-width: 768px) {
+  .hero-card,
+  .info-section,
+  .longread,
+  .logbook,
+  .contact,
+  .gallery-section {
+    max-width: 95%;
+    padding: 10px;
   }
+}
