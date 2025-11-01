@@ -81,6 +81,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
+  margin-bottom: 50px; /* espaçamento entre header e hero-card */
 }
 
 header .brand {
@@ -168,7 +169,7 @@ nav a:hover {
   border: 2px solid var(--verde-claro);
   backdrop-filter: blur(2px);
   max-width: 800px;
-  margin: 0 auto 40px; /* espaço entre seções */
+  margin: 0 auto 40px;
 }
 
 /* ====== SEÇÃO DE INFORMAÇÃO ====== */
@@ -192,7 +193,7 @@ nav a:hover {
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px; /* aumenta espaço entre caixas */
+  gap: 30px;
 }
 
 /* ====== INFO BOX ====== */
@@ -203,7 +204,6 @@ nav a:hover {
   overflow: hidden;
   border: 2px solid var(--marrom-claro);
   transition: transform 0.3s ease;
-  /* margin removido para gap do grid assumir */
 }
 
 .info-box:hover { transform: translateY(-5px); }
@@ -246,7 +246,7 @@ nav a:hover {
 .photos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px; /* aumento do espaço */
+  gap: 20px;
 }
 
 .photos figure {
@@ -278,7 +278,7 @@ nav a:hover {
 .videos {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* espaçamento entre vídeos */
+  gap: 30px;
 }
 
 .video-card {
